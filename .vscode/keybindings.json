@@ -1,0 +1,11 @@
+[
+  {
+    "key": "ctrl+shift+b",
+    "command": "-cmake.build"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "workbench.action.tasks.build",
+    "when": "workspaceFolderCount > 0"
+  }
+]

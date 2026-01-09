@@ -1,0 +1,207 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "plusBASIC",
+  "scopeName": "source.plusbasic",
+  "patterns": [
+    {
+      "include": "#line-number"
+    },
+    {
+      "include": "#labels"
+    },
+    {
+      "include": "#line-references"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#numbers"
+    }
+  ],
+  "repository": {
+    "line-number": {
+      "patterns": [
+        {
+          "name": "constant.numeric.line-number.plusbasic",
+          "match": "^\\s*\\d+"
+        }
+      ]
+    },
+    "labels": {
+      "patterns": [
+        {
+          "name": "entity.name.label.plusbasic",
+          "match": "\\b_[a-zA-Z_][a-zA-Z0-9_]*\\b"
+        }
+      ]
+    },
+    "line-references": {
+      "patterns": [
+        {
+          "name": "constant.numeric.line-reference.plusbasic",
+          "match": "(?i)(?<=\\b(GOTO|GOSUB|THEN)\\s)\\d+"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.rem.plusbasic",
+          "match": "(?i)\\bREM\\b.*$"
+        },
+        {
+          "name": "comment.line.apostrophe.plusbasic",
+          "match": "'.*$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.plusbasic",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.plusbasic",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.plusbasic",
+          "match": "(?i)\\b(IF|THEN|ELSE|ELSEIF|END IF|FOR|TO|STEP|NEXT|WHILE|WEND|DO|LOOP|GOTO|GOSUB|RETURN|ON|ERROR|RESUME|EXIT|SELECT|CASE|END SELECT|CONT)\\b"
+        },
+        {
+          "name": "keyword.other.plusbasic",
+          "match": "(?i)\\b(DIM|CLEAR|LET|SET|DEF|DATA|READ|RESTORE|SWAP|ERASE|OPTION|RANDOMIZE|END|STOP|RUN|NEW|LIST|LOAD|SAVE|CHAIN|EDIT|ARGS|CD|DEL|MKDIR|RENAME|COPY|CALL|EVAL)\\b"
+        },
+        {
+          "name": "keyword.operator.plusbasic",
+          "match": "(?i)\\b(AND|OR|NOT|XOR|MOD|DIV)\\b"
+        },
+        {
+          "name": "keyword.other.io.plusbasic",
+          "match": "(?i)\\b(INPUT|LINE INPUT|PRINT|LPRINT|USING|OPEN|CLOSE|GET|PUT|WRITE|READ|LOCATE|CLS|COLOR|SCREEN|PSET|PRESET|COPY|APPEND|CLOAD|CSAVE|FILEPOS)\\b"
+        },
+        {
+          "name": "keyword.other.graphics.plusbasic",
+          "match": "(?i)\\b(SPRITE|TILE|TILEMAP|BITMAP|PALETTE|SCROLL|FILL|DRAW|POINT|POSX|POSY|SET SPRITE|SET TILE|SET TILEMAP|LOAD BITMAP|SAVE BITMAP|LOAD TILEMAP|SAVE TILEMAP|LOAD TILESET|LOAD PALETTE|LOAD CHRSET|USE CHRSET|GET SCREEN|PUT SCREEN|GET TILEMAP|PUT TILEMAP|CLEAR BITMAP|FILL BITMAP|FILL TILEMAP|FILL SCREEN|FILL COLORMAP|LOAD COLORMAP|SAVE COLORMAP)\\b"
+        },
+        {
+          "name": "keyword.other.sound.plusbasic",
+          "match": "(?i)\\b(SOUND|PLAY|PLAY SAMPLE|PLAY TRACK|STOP TRACK|PAUSE TRACK|RESUME TRACK|LOOP TRACK|SET TRACK|PSG)\\b"
+        },
+        {
+          "name": "keyword.other.file.plusbasic",
+          "match": "(?i)\\b(LOAD|SAVE|LOAD DIR|DIR|DEL|FILELEN|FILEPOS|FILEDATETIME\\$|FILEATTR|FILEDIR\\$|FILEEXT\\$|FILESTATUS\\$|TRIMDIR\\$|TRIMEXT\\$)\\b"
+        },
+        {
+          "name": "keyword.other.plusbasic-specific.plusbasic",
+          "match": "(?i)\\b(SET FNKEY|SET BORDER|SET CURSOR|SET BREAK|SET KEY|SET FAST|SET SPEED|SET COLOR|SET SAVE|SET SCROLL|SET SOUND|SET USRINT|GETSPEED|GETKEY\\$|GETKEY|GETCOLOR|GETCURSOR|GETPALETTE\\$|GETSOUNDFAST|GETSPRITE|GETSPRITE\\$|GETSPRITEX|GETSPRITEY|GETTILE\\$|GETCHRSET|GETBORDERCHR|GETBORDERCHR\\$|GETBORDERCOLOR|GETBORDERCOLOR\\$|GETKEYREPEAT)\\b"
+        },
+        {
+          "name": "keyword.other.input.plusbasic",
+          "match": "(?i)\\b(JOY|JOY\\$|KEY|INKEY|INKEY\\$|UPKEY|UPRKEY|UPRKEY\\$|LWRKEY|LWRKEY\\$|MOUSEX|MOUSEY|MOUSEB|MOUSEW|ENDKEY)\\b"
+        },
+        {
+          "name": "keyword.other.diagnostic.plusbasic",
+          "match": "(?i)\\b(TRON|TROFF|DUMP VARS)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "support.function.math.plusbasic",
+          "match": "(?i)(?<![a-zA-Z0-9_])(ABS|ATN|BYTE|COS|EXP|FIX|FLOAT\\$|FLOAT|INT|LOG|LONG\\$|LONG|SGN|SIN|SQR|TAN|WORD\\$|WORD)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
+        },
+        {
+          "name": "support.function.string.plusbasic",
+          "match": "(?i)(?<![a-zA-Z0-9_])(ARGS\\$|ASC\\$|ASC|BIN\\$|CD\\$|CHR\\$|DEC|ERR\\$|HEX\\$|INSTR|LEFT\\$|LEN|LWR\\$|LWR|MID\\$|PAD\\$|RIGHT\\$|SPACE\\$|STR\\$|STRING\\$|TRIMDIR\\$|TRIMEXT\\$|TRIML\\$|TRIMR\\$|TRIM\\$|UPR\\$|UPR|VAL)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
+        },
+        {
+          "name": "support.function.time.plusbasic",
+          "match": "(?i)(?<![a-zA-Z0-9_])(DATE\\$|DATETIME\\$|FILEDATETIME\\$|TIME\\$|TIMER)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
+        },
+        {
+          "name": "support.function.file.plusbasic",
+          "match": "(?i)(?<![a-zA-Z0-9_])(FILEATTR|FILEDIR\\$|FILEEXT\\$|FILELEN|FILEPOS|FILESTATUS\\$|STRPTR)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
+        },
+        {
+          "name": "support.function.array.plusbasic",
+          "match": "(?i)(?<![a-zA-Z0-9_])(COMPARE|DIM|FRE|INDEX|LEN)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
+        },
+        {
+          "name": "support.function.memory.plusbasic",
+          "match": "(?i)(?<![a-zA-Z0-9_])(CALL|CURSOROFFSET|CURSORX|CURSORY|DEEK|DOKE|IN\\$|IN|OFFSET|OUT|PEEK\\$|PEEK|POKE|USR|VARDEF|VARPTR|WAIT)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
+        },
+        {
+          "name": "support.function.color.plusbasic",
+          "match": "(?i)(?<![a-zA-Z0-9_])(ATTR\\$|ATTR|GETBORDERCHR\\$|GETBORDERCOLOR\\$|GETPALETTE\\$|PEEKCOLOR\\$|PEEKCOLOR|POKECOLOR|RGBDEC\\$|RGBHEX\\$|RGB\\$|RGB)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
+        },
+        {
+          "name": "support.function.input.plusbasic",
+          "match": "(?i)(?<![a-zA-Z0-9_])(INKEY\\$|INKEY|JOY\\$|JOY|KEY|LWRKEY\\$|LWRKEY|MOUSEB|MOUSEW|MOUSEX|MOUSEY|UPRKEY\\$|UPRKEY)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
+        },
+        {
+          "name": "support.function.graphics.plusbasic",
+          "match": "(?i)(?<![a-zA-Z0-9_])(GETSPRITE\\$|GETSPRITE|GETSPRITEX|GETSPRITEY|GETTILE\\$|PEEKSCREEN\\$|PEEKSCREEN|POINT|POSX|POSY|TILEMAP|TILEOFFSET|TILEMAPX|TILEMAPY)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
+        },
+        {
+          "name": "support.function.version.plusbasic",
+          "match": "(?i)(?<![a-zA-Z0-9_])(VER\\$|VER)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
+        },
+        {
+          "name": "support.function.misc.plusbasic",
+          "match": "(?i)(?<![a-zA-Z0-9_])(ENDKEY|GETCHRDEF\\$|GETKEY\\$|GETKEY|LIST\\$|LPOS|PAUSE|POS|RND)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.arithmetic.plusbasic",
+          "match": "\\+|\\-|\\*|\\/|\\^|\\\\|="
+        },
+        {
+          "name": "keyword.operator.comparison.plusbasic",
+          "match": "<>|<=|>=|<|>|="
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.plusbasic",
+          "match": "\\b\\d+(\\.\\d+)?(E[\\+\\-]?\\d+)?\\b"
+        },
+        {
+          "name": "constant.numeric.hex.plusbasic",
+          "match": "&H[0-9A-Fa-f]+"
+        },
+        {
+          "name": "constant.numeric.octal.plusbasic",
+          "match": "&O[0-7]+"
+        }
+      ]
+    }
+  }
+}

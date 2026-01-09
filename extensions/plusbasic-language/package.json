@@ -1,0 +1,89 @@
+{
+  "name": "plusbasic-language",
+  "displayName": "plusBASIC Language Support",
+  "description": "Syntax highlighting and language support for plusBASIC (.bas files) - BASIC for Aquarius+",
+  "version": "0.0.4",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "plusbasic",
+        "aliases": [
+          "plusBASIC",
+          "plusbasic"
+        ],
+        "extensions": [
+          ".bas"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "plusbasic",
+        "scopeName": "source.plusbasic",
+        "path": "./syntaxes/plusbasic.tmLanguage.json"
+      }
+    ],
+    "configurationDefaults": {
+      "editor.tokenColorCustomizations": {
+        "[*]": {
+          "textMateRules": [
+            {
+              "scope": "constant.numeric.line-number.plusbasic",
+              "settings": {
+                "foreground": "#007070"
+              }
+            },
+            {
+              "scope": "constant.numeric.line-reference.plusbasic",
+              "settings": {
+                "foreground": "#00a3a3"
+              }
+            },
+            {
+              "scope": "entity.name.label.plusbasic",
+              "settings": {
+                "foreground": "#00a3a3"
+              }
+            },
+            {
+              "scope": [
+                "keyword.control.plusbasic",
+                "keyword.other.plusbasic",
+                "keyword.operator.plusbasic",
+                "keyword.other.io.plusbasic",
+                "keyword.other.graphics.plusbasic",
+                "keyword.other.sound.plusbasic",
+                "keyword.other.file.plusbasic",
+                "keyword.other.plusbasic-specific.plusbasic",
+                "keyword.other.input.plusbasic",
+                "keyword.other.diagnostic.plusbasic",
+                "support.function.math.plusbasic",
+                "support.function.string.plusbasic",
+                "support.function.time.plusbasic",
+                "support.function.file.plusbasic",
+                "support.function.array.plusbasic",
+                "support.function.memory.plusbasic",
+                "support.function.color.plusbasic",
+                "support.function.input.plusbasic",
+                "support.function.graphics.plusbasic",
+                "support.function.version.plusbasic",
+                "support.function.misc.plusbasic"
+              ],
+              "settings": {
+                "foreground": "#5596ff",
+                "fontStyle": "bold"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
