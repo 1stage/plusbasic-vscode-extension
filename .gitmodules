@@ -1,0 +1,3 @@
+[submodule "AquariusPlus"]
+	path = AquariusPlus
+	url = https://github.com/RevCurtisP/AquariusPlus.git
