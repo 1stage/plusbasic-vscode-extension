@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.2.5] - 2026-01-09
+
+### Changed
+- DATA lines without commas or quotes now treat the remainder as plain text, preventing keywords/numbers from being highlighted inside those unquoted payloads
+
 ## [0.2.4] - 2026-01-09
 
 ### Added

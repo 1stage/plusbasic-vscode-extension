@@ -86,6 +86,16 @@
     "keywords": {
       "patterns": [
         {
+          "begin": "(?i)\\b(DATA)\\s+(?=[^,\"]*$)",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.other.plusbasic"
+            }
+          },
+          "end": "$",
+          "contentName": "string.unquoted.data.plusbasic"
+        },
+        {
           "name": "keyword.control.plusbasic",
           "match": "(?i)\\b(IF|THEN|ELSE|ELSEIF|END IF|FOR|TO|STEP|NEXT|WHILE|WEND|DO|LOOP|GOTO|GOSUB|RETURN|ON|ERROR|RESUME|EXIT|SELECT|CASE|END SELECT|CONT)\\b"
         },
