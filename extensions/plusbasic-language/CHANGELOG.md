@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.2.1] - 2026-01-09
+
+### Added
+- List token keywords: ATTRLIST, PALETTELIST, RGBLIST, TILELIST for use with DEF and APPEND statements
+- Joystick helper functions: JOYD, JOYJ, JOYK, JOYL, JOYP, JOYR, JOYU
+- Extended Bluetooth controller functions: JOYBA, JOYBB, JOYBG, JOYBL, JOYBM, JOYBR, JOYBS, JOYBT, JOYBU, JOYBV, JOYBX, JOYBY, JOYDD, JOYDL, JOYDR, JOYDU, JOYLT, JOYLX, JOYLY, JOYRT, JOYRX, JOYRY
+
 ## [0.0.4] - 2026-01-07
 
 ### Fixed

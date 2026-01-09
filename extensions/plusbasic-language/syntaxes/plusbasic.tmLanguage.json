@@ -5,10 +5,14 @@
   "patterns": [
     {
       "include": "#line-number"
-        {
-          "name": "support.function.math.plusbasic",
-          "match": "(?i)(?<![a-zA-Z0-9_])(ABS|ATN|BIT|BYTE|COS|EXP|FIX|FLOAT\$|FLOAT|INT|LOG|LONG\$|LONG|SGN|SIN|SQR|TAN|WORD\$|WORD)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
-        },
+    },
+    {
+      "include": "#labels"
+    },
+    {
+      "include": "#line-references"
+    },
+    {
       "include": "#comments"
     },
     {
@@ -111,7 +115,7 @@
         },
         {
           "name": "keyword.other.plusbasic-specific.plusbasic",
-          "match": "(?i)\\b(SET FNKEY|SET BORDER|SET CURSOR|SET BREAK|SET KEY|SET FAST|SET SPEED|SET COLOR|SET SAVE|SET SCROLL|SET SOUND|SET USRINT|GETSPEED|GET ARGS|GETARGS|GETKEY\\$|GETKEY|GETCOLOR|GETCURSOR|GETPALETTE\\$|GETSOUNDFAST|GETSPRITE|GETSPRITE\\$|GETSPRITEX|GETSPRITEY|GETTILE\\$|GETCHRSET|GETBORDERCHR|GETBORDERCHR\\$|GETBORDERCOLOR|GETBORDERCOLOR\\$|GETKEYREPEAT|LOAD FNKEYS|SAVE FNKEYS|RESET BORDER|RESET SCREEN|RESET SPRITE|RESET PALETTE|RESET CHRDEF|RESET USRDEF|RESET BIT|RESET|INTLIST|BYTELIST|BYTES|FNKEYS|BORDER|SPEED)\\b"
+          "match": "(?i)\\b(SET FNKEY|SET BORDER|SET CURSOR|SET BREAK|SET KEY|SET FAST|SET SPEED|SET COLOR|SET SAVE|SET SCROLL|SET SOUND|SET USRINT|GETSPEED|GET ARGS|GETARGS|GETKEY\\$|GETKEY|GETCOLOR|GETCURSOR|GETPALETTE\\$|GETSOUNDFAST|GETSPRITE|GETSPRITE\\$|GETSPRITEX|GETSPRITEY|GETTILE\\$|GETCHRSET|GETBORDERCHR|GETBORDERCHR\\$|GETBORDERCOLOR|GETBORDERCOLOR\\$|GETKEYREPEAT|LOAD FNKEYS|SAVE FNKEYS|RESET BORDER|RESET SCREEN|RESET SPRITE|RESET PALETTE|RESET CHRDEF|RESET USRDEF|RESET BIT|RESET|INTLIST|BYTELIST|ATTRLIST|PALETTELIST|RGBLIST|TILELIST|BYTES|FNKEYS|BORDER|SPEED)\\b"
         },
         {
           "name": "keyword.other.toggle.plusbasic",
@@ -163,7 +167,7 @@
         },
         {
           "name": "support.function.input.plusbasic",
-          "match": "(?i)(?<![a-zA-Z0-9_])(INKEY\\$|INKEY|JOY\\$|JOY|KEY|LWRKEY\\$|LWRKEY|MOUSEB|MOUSEW|MOUSEX|MOUSEY|UPRKEY\\$|UPRKEY)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
+          "match": "(?i)(?<![a-zA-Z0-9_])(INKEY\\$|INKEY|JOY\\$|JOY|JOYD|JOYJ|JOYK|JOYL|JOYP|JOYR|JOYU|JOYBA|JOYBB|JOYBG|JOYBL|JOYBM|JOYBR|JOYBS|JOYBT|JOYBU|JOYBV|JOYBX|JOYBY|JOYDD|JOYDL|JOYDR|JOYDU|JOYLT|JOYLX|JOYLY|JOYRT|JOYRX|JOYRY|KEY|LWRKEY\\$|LWRKEY|MOUSEB|MOUSEW|MOUSEX|MOUSEY|UPRKEY\\$|UPRKEY)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
         },
         {
           "name": "support.function.graphics.plusbasic",
