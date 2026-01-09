@@ -5,14 +5,10 @@
   "patterns": [
     {
       "include": "#line-number"
-    },
-    {
-      "include": "#labels"
-    },
-    {
-      "include": "#line-references"
-    },
-    {
+        {
+          "name": "support.function.math.plusbasic",
+          "match": "(?i)(?<![a-zA-Z0-9_])(ABS|ATN|BIT|BYTE|COS|EXP|FIX|FLOAT\$|FLOAT|INT|LOG|LONG\$|LONG|SGN|SIN|SQR|TAN|WORD\$|WORD)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
+        },
       "include": "#comments"
     },
     {
@@ -103,7 +99,7 @@
         },
         {
           "name": "keyword.other.graphics.plusbasic",
-          "match": "(?i)\\b(SPRITE|TILE|TILEMAP|BITMAP|PALETTE|SCROLL|FILL|DRAW|POINT|POSX|POSY|SET SPRITE|SET TILE|SET TILEMAP|LOAD BITMAP|SAVE BITMAP|LOAD TILEMAP|SAVE TILEMAP|LOAD TILESET|LOAD PALETTE|LOAD CHRSET|USE CHRSET|GET SCREEN|PUT SCREEN|GET TILEMAP|PUT TILEMAP|CLEAR BITMAP|FILL BITMAP|FILL TILEMAP|FILL SCREEN|FILL COLORMAP|LOAD COLORMAP|SAVE COLORMAP)\\b"
+          "match": "(?i)\\b(SPRITE|TILE|TILEMAP|BITMAP|PALETTE|SCROLL|FILL|DRAW|POINT|POSX|POSY|SET SPRITE|SET TILE|SET TILEMAP|LOAD BITMAP|SAVE BITMAP|LOAD TILEMAP|SAVE TILEMAP|LOAD TILESET|SAVE TILESET|TILESET|LOAD PALETTE|LOAD CHRSET|USE CHRSET|GET SCREEN|PUT SCREEN|GET TILEMAP|PUT TILEMAP|CLEAR BITMAP|FILL BITMAP|FILL TILEMAP|FILL SCREEN|FILL COLORMAP|LOAD COLORMAP|SAVE COLORMAP|STASH BITMAP|STASH SCREEN|STASH TILEMAP)\\b"
         },
         {
           "name": "keyword.other.sound.plusbasic",
@@ -115,7 +111,11 @@
         },
         {
           "name": "keyword.other.plusbasic-specific.plusbasic",
-          "match": "(?i)\\b(SET FNKEY|SET BORDER|SET CURSOR|SET BREAK|SET KEY|SET FAST|SET SPEED|SET COLOR|SET SAVE|SET SCROLL|SET SOUND|SET USRINT|GETSPEED|GETKEY\\$|GETKEY|GETCOLOR|GETCURSOR|GETPALETTE\\$|GETSOUNDFAST|GETSPRITE|GETSPRITE\\$|GETSPRITEX|GETSPRITEY|GETTILE\\$|GETCHRSET|GETBORDERCHR|GETBORDERCHR\\$|GETBORDERCOLOR|GETBORDERCOLOR\\$|GETKEYREPEAT)\\b"
+          "match": "(?i)\\b(SET FNKEY|SET BORDER|SET CURSOR|SET BREAK|SET KEY|SET FAST|SET SPEED|SET COLOR|SET SAVE|SET SCROLL|SET SOUND|SET USRINT|GETSPEED|GET ARGS|GETARGS|GETKEY\\$|GETKEY|GETCOLOR|GETCURSOR|GETPALETTE\\$|GETSOUNDFAST|GETSPRITE|GETSPRITE\\$|GETSPRITEX|GETSPRITEY|GETTILE\\$|GETCHRSET|GETBORDERCHR|GETBORDERCHR\\$|GETBORDERCOLOR|GETBORDERCOLOR\\$|GETKEYREPEAT|LOAD FNKEYS|SAVE FNKEYS|RESET BORDER|RESET SCREEN|RESET SPRITE|RESET PALETTE|RESET CHRDEF|RESET USRDEF|RESET BIT|RESET|INTLIST|BYTELIST|BYTES|FNKEYS|BORDER|SPEED)\\b"
+        },
+        {
+          "name": "keyword.other.toggle.plusbasic",
+          "match": "(?i)\\b(OFF)\\b"
         },
         {
           "name": "keyword.other.input.plusbasic",
@@ -133,9 +133,13 @@
           "name": "support.function.math.plusbasic",
           "match": "(?i)(?<![a-zA-Z0-9_])(ABS|ATN|BYTE|COS|EXP|FIX|FLOAT\\$|FLOAT|INT|LOG|LONG\\$|LONG|SGN|SIN|SQR|TAN|WORD\\$|WORD)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
         },
+          {
+            "name": "support.function.math.plusbasic",
+            "match": "(?i)(?<![a-zA-Z0-9_])(ABS|ATN|BIT|BYTE|COS|EXP|FIX|FLOAT\\$|FLOAT|INT|LOG|LONG\\$|LONG|SGN|SIN|SQR|TAN|WORD\\$|WORD)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
+          },
         {
           "name": "support.function.string.plusbasic",
-          "match": "(?i)(?<![a-zA-Z0-9_])(ARGS\\$|ASC\\$|ASC|BIN\\$|CD\\$|CHR\\$|DEC|ERR\\$|HEX\\$|INSTR|LEFT\\$|LEN|LWR\\$|LWR|MID\\$|PAD\\$|RIGHT\\$|SPACE\\$|STR\\$|STRING\\$|TRIMDIR\\$|TRIMEXT\\$|TRIML\\$|TRIMR\\$|TRIM\\$|UPR\\$|UPR|VAL)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
+          "match": "(?i)(?<![a-zA-Z0-9_])(ARGS\\$|ASC\\$|ASC|BIN\\$|CD\\$|CHR\\$|CHR|DEC|ERR\\$|HEX\\$|INSTR|LEFT\\$|LEN|LWR\\$|LWR|MID\\$|PAD\\$|RIGHT\\$|SPACE\\$|STR\\$|STRING\\$|TRIMDIR\\$|TRIMEXT\\$|TRIML\\$|TRIMR\\$|TRIM\\$|UPR\\$|UPR|VAL)(?=\\s|\\(|\\)|,|;|:|\\+|\\-|\\*|\\/|=|<|>|$)"
         },
         {
           "name": "support.function.time.plusbasic",
