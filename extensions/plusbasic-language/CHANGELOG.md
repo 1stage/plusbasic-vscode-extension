@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.2.3] - 2026-01-09
+
+### Fixed
+- SET, LOAD, and SAVE multi-word commands now highlight correctly as keywords
+- Reordered keyword pattern evaluation to ensure longer multi-word patterns match before single-word variants
+- Commands like SET FNKEY, LOAD COLORMAP, and SAVE SCREEN now highlight completely blue
+
 ## [0.2.2] - 2026-01-09
 
 ### Changed
