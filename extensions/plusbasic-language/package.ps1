@@ -48,7 +48,23 @@ try {
     Write-Host "Packaging plusBASIC extension to $OutFile ..."
     # Use @vscode/vsce with flags to bypass all interactive prompts
     & $npx --yes @vscode/vsce package --no-dependencies --allow-missing-repository --skip-license --out "$OutFile"
-    Write-Host "Done. Output: $(Resolve-Path $OutFile)" -ForegroundColor Green
+    
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "Package created successfully: $(Resolve-Path $OutFile)" -ForegroundColor Green
+        
+        # Auto-install the extension for testing
+        Write-Host "`nInstalling extension for testing..." -ForegroundColor Cyan
+        $vsixPath = Resolve-Path $OutFile
+        & code --install-extension "$vsixPath" --force
+        
+        if ($LASTEXITCODE -eq 0) {
+            Write-Host "Extension installed successfully! Restart VS Code to use the updated version." -ForegroundColor Green
+        } else {
+            Write-Warning "Failed to install extension. You can manually install from: $vsixPath"
+        }
+    } else {
+        Write-Error "Packaging failed."
+    }
 }
 finally {
     Pop-Location
