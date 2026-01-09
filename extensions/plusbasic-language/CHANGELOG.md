@@ -1,5 +1,14 @@
 # Change Log
 
+## [1.0.0] - 2026-01-09
+
+### Added
+- Question mark (?) highlighted as PRINT shorthand
+
+### Fixed
+- DATA lines without commas or quotes treat the remainder as plain text, preventing keyword/number highlighting inside unquoted payloads
+- OFF keyword matches ON keyword color (bright blue)
+
 ## [0.2.5] - 2026-01-09
 
 ### Changed
