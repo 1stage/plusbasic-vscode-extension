@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.2.2] - 2026-01-09
+
+### Changed
+- String literals are now restricted to single lines; unclosed quotes no longer span into subsequent lines
+- Prevents malformed strings in unit test scripts from affecting syntax highlighting of following lines
+
 ## [0.2.1] - 2026-01-09
 
 ### Added

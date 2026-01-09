@@ -73,7 +73,7 @@
         {
           "name": "string.quoted.double.plusbasic",
           "begin": "\"",
-          "end": "\"",
+          "end": "(\"|$)",
           "patterns": [
             {
               "name": "constant.character.escape.plusbasic",
@@ -198,12 +198,16 @@
     "numbers": {
       "patterns": [
         {
-          "name": "constant.numeric.plusbasic",
-          "match": "\\b\\d+(\\.\\d+)?(E[\\+\\-]?\\d+)?\\b"
+          "name": "constant.numeric.hex.plusbasic",
+          "match": "\\$[0-9A-Fa-f]+\\b"
         },
         {
-          "name": "constant.numeric.hex.plusbasic",
-          "match": "&H[0-9A-Fa-f]+"
+          "name": "constant.numeric.binary.plusbasic",
+          "match": "%[01]+\\b"
+        },
+        {
+          "name": "constant.numeric.plusbasic",
+          "match": "\\b\\d+(\\.\\d+)?(E[\\+\\-]?\\d+)?\\b"
         },
         {
           "name": "constant.numeric.octal.plusbasic",
