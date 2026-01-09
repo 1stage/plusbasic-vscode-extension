@@ -120,6 +120,19 @@ This extension recognizes comprehensive plusBASIC syntax including:
 
 ### Memory & Pointers
 - `PEEK`, `PEEK$`, `POKE`, `DEEK`, `DOKE`
+
+## Language Reference
+
+For the complete and authoritative plusBASIC language specification, see the **AquariusPlus submodule** included with this extension's source repository:
+
+📁 **`AquariusPlus/plusBasic/`** - Official language documentation and reference
+
+Key documentation files:
+- `quickref.md` - Complete command quick reference
+- `README.md` - Language overview and guide
+- `releases.md` - Version history and new features
+
+This extension's syntax highlighting is maintained to match the official specification in this folder.
 - `POKE COLOR`, `POKE SCREEN`
 - `PEEKCOLOR`, `PEEKCOLOR$`, `PEEKSCREEN`, `PEEKSCREEN$`
 - `VARDEF`, `VARPTR`, `STRPTR`

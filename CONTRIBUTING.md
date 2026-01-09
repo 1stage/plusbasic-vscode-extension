@@ -155,12 +155,35 @@ Found a bug or have a feature request?
    - VS Code version
    - Sample code demonstrating the issue
 
+## Language Reference - Critical Information ⭐
+
+**The most important folder in this project for language accuracy:**
+
+📁 **`AquariusPlus/plusBasic/`**
+
+This is the authoritative source for all plusBASIC language features, keywords, and syntax. Before making ANY changes to syntax highlighting or language features:
+
+1. **Check the reference files:**
+   - `AquariusPlus/plusBasic/README.md` - Main language documentation
+   - `AquariusPlus/plusBasic/quickref.md` - Quick reference for all commands
+   - `AquariusPlus/plusBasic/releases.md` - Version history and new features
+   - `AquariusPlus/plusBasic/revisions.md` - Detailed change log
+
+2. **Update the submodule** to get the latest language spec:
+   ```bash
+   git submodule update --remote AquariusPlus
+   ```
+
+3. **Verify your changes** against the official documentation in this folder
+
+**All syntax rules, keywords, and functions must match the official specification in `AquariusPlus/plusBasic/`**
+
 ## Resources
 
+- **[plusBASIC Official Reference](AquariusPlus/plusBasic/)** - ⭐ PRIMARY LANGUAGE SOURCE
 - [VS Code Extension API](https://code.visualstudio.com/api)
 - [TextMate Grammar Guide](https://macromates.com/manual/en/language_grammars)
-- [AquariusPlus Documentation](https://github.com/RevCurtisP/AquariusPlus)
-- [plusBASIC Reference](https://github.com/RevCurtisP/AquariusPlus) (see submodule)
+- [AquariusPlus Repository](https://github.com/RevCurtisP/AquariusPlus)
 
 ## Questions?
 
