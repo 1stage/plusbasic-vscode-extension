@@ -2,6 +2,28 @@
 
 Syntax highlighting and language support for plusBASIC - a BASIC variant for the Aquarius+ computer system.
 
+## Installation
+
+### From GitHub Releases (Recommended)
+
+1. Download the latest `.vsix` file from the [Releases page](https://github.com/1stage/plusBASIC-VSCode-Extension/releases)
+2. Open Visual Studio Code
+3. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac) to open the Command Palette
+4. Type **"Extensions: Install from VSIX..."** and select it
+5. Browse to and select the downloaded `.vsix` file
+6. Restart VS Code when prompted
+
+### Manual Installation from Source
+
+1. Clone this repository
+2. Open the project in VS Code
+3. Press `Ctrl+Shift+B` to build the extension
+4. Install the generated `.vsix` file using the steps above
+
+### Updates
+
+When a new version is released, simply download and install the new `.vsix` file following the same installation steps. VS Code will automatically replace the old version.
+
 ## Features
 
 - **Comprehensive syntax highlighting** for all plusBASIC keywords, functions, and commands
