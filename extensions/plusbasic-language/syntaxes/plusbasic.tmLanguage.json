@@ -122,6 +122,10 @@
           "match": "(?i)\\b(OFF)\\b"
         },
         {
+          "name": "keyword.other.io.plusbasic",
+          "match": "\\?"
+        },
+        {
           "name": "keyword.other.input.plusbasic",
           "match": "(?i)\\b(JOY|JOY\\$|KEY|INKEY|INKEY\\$|UPKEY|UPRKEY|UPRKEY\\$|LWRKEY|LWRKEY\\$|MOUSEX|MOUSEY|MOUSEB|MOUSEW|ENDKEY)\\b"
         },

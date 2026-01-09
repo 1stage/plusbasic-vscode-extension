@@ -1,5 +1,14 @@
 # Change Log
 
+## [0.2.4] - 2026-01-09
+
+### Added
+- Question mark (?) now highlighted as PRINT shorthand keyword
+
+### Fixed
+- OFF keyword now matches ON keyword color (both bright blue)
+- Added keyword.other.toggle.plusbasic to color configuration
+
 ## [0.2.3] - 2026-01-09
 
 ### Fixed
